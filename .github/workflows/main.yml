@@ -13,8 +13,8 @@ jobs:
       run:
         working-directory: ${{env.WrkDir}}
     env: 
-      WrkDir: ./source
-      MainSln: NeoCortexApi.All.sln
+      WrkDir: ./AroopaApi
+      MainSln: AroopaApi.sln
     steps:
       - uses: actions/checkout@v2
       - name: Setup .NET Core
