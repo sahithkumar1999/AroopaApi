@@ -9,3 +9,15 @@ D:\Company Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\AroopaApi.dll
 D:\Company Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\refint\AroopaApi.dll
 D:\Company Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\AroopaApi.pdb
 D:\Company Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\ref\AroopaApi.dll
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\bin\Debug\net8.0\AroopaApi.deps.json
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\bin\Debug\net8.0\AroopaApi.dll
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\bin\Debug\net8.0\AroopaApi.pdb
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\AroopaApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\AroopaApi.AssemblyInfoInputs.cache
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\AroopaApi.AssemblyInfo.cs
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\AroopaApi.csproj.CoreCompileInputs.cache
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\AroopaApi.sourcelink.json
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\AroopaApi.dll
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\refint\AroopaApi.dll
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\AroopaApi.pdb
+D:\Company Aroopa\Aroopa\AroopaApi\AroopaApi\obj\Debug\net8.0\ref\AroopaApi.dll

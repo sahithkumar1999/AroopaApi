@@ -11,4 +11,10 @@
     <ProjectReference Include="..\AroopaApi\AroopaApi.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="TrainingFiles\shakespeare.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
