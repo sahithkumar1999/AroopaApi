@@ -31,3 +31,6 @@ jobs:
       
       - name: Build
         run: dotnet build ${{env.MainSln}} --configuration Release --no-restore
+
+      - name: Test
+        run: dotnet test ${{env.MainSln}} --no-restore --verbosity normal --filter TestCategory=Prod
