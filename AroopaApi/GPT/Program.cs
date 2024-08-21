@@ -29,8 +29,8 @@ namespace GPT
 
             List<int> encodedData = lambda_Encoder.Encode("hii there", chars);
 
-            Console.WriteLine("Encoded result:");
-            Console.WriteLine(string.Join(", ", encodedData));
+            //Console.WriteLine("Encoded result:");
+            //Console.WriteLine(string.Join(", ", encodedData));
 
             string decodedText = lambda_Encoder.Decode(encodedData, chars);
 
