@@ -34,7 +34,7 @@ namespace GPT
 
             string decodedText = lambda_Encoder.Decode(encodedData, chars);
 
-            Console.WriteLine($"decodedText : {decodedText}");
+            //Console.WriteLine($"decodedText : {decodedText}");
 
         }
     }
