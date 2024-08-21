@@ -12,7 +12,7 @@ namespace GPT
         static void Main(string[] args)
         {
             GPTmethods GPTmethods = new GPTmethods();
-            lambda_Encoder lambda_Encoder = new lambda_Encoder();
+            lambdaEncoder lambdaEncoder = new lambdaEncoder();
 
             string filePath = "D:\\Company Aroopa\\Aroopa\\AroopaApi\\GPT\\TrainingFiles\\shakespeare.txt";
             var text = GPTmethods.ReadTextFromFile(filePath);
@@ -27,12 +27,12 @@ namespace GPT
             Console.WriteLine(vocabSize);
 
 
-            List<int> encodedData = lambda_Encoder.Encode("hii there", chars);
+            List<int> encodedData = lambdaEncoder.Encode("hii there", chars);
 
             //Console.WriteLine("Encoded result:");
             //Console.WriteLine(string.Join(", ", encodedData));
 
-            string decodedText = lambda_Encoder.Decode(encodedData, chars);
+            string decodedText = lambdaEncoder.Decode(encodedData, chars);
 
             //Console.WriteLine($"decodedText : {decodedText}");
 

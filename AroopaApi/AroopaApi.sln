@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34316.72
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AroopaApi", "AroopaApi\AroopaApi.csproj", "{7A6B4AB9-80A0-45ED-87E6-5F46C1944091}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AroopaApi", "AroopaApi\AroopaApi.csproj", "{7A6B4AB9-80A0-45ED-87E6-5F46C1944091}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPT", "GPT\GPT.csproj", "{770D0809-FC47-41D9-A2BE-E025485F8B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GPT", "GPT\GPT.csproj", "{770D0809-FC47-41D9-A2BE-E025485F8B0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestsProject", "UnitTestsProject\UnitTestsProject.csproj", "{C1CBC952-5E40-4915-9A31-0B39F120B94C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{770D0809-FC47-41D9-A2BE-E025485F8B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{770D0809-FC47-41D9-A2BE-E025485F8B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{770D0809-FC47-41D9-A2BE-E025485F8B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1CBC952-5E40-4915-9A31-0B39F120B94C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1CBC952-5E40-4915-9A31-0B39F120B94C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1CBC952-5E40-4915-9A31-0B39F120B94C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1CBC952-5E40-4915-9A31-0B39F120B94C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
