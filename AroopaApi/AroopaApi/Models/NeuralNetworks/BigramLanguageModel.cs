@@ -14,7 +14,7 @@ namespace AroopaApi.Models.NeuralNetworks
             TokenEmbeddingTable = new Embedding(vocabSize, vocabSize);
         }
 
-        public (NDArray logits, float? loss) Forward(NDArray idx, NDArray targets = null)
+        public (NDArray logits, NDArray targets) Forward(NDArray idx, NDArray targets = null)
         {
             // Compute logits
             NDArray logits = TokenEmbeddingTable.Forward(idx); // (B, T, C)
@@ -33,9 +33,9 @@ namespace AroopaApi.Models.NeuralNetworks
             targets = targets.reshape(batchSize * sequenceLength);
 
             // Compute cross-entropy loss
-            float loss = ComputeCrossEntropyLoss(logits, targets);
+            //float loss = ComputeCrossEntropyLoss(logits, targets);
 
-            return (logits, loss);
+            return (logits, targets);
         }
 
         private float ComputeCrossEntropyLoss(NDArray logits, NDArray targets)
@@ -94,13 +94,6 @@ namespace AroopaApi.Models.NeuralNetworks
 
 
 
-
-
-
-
-
-
-
         public NDArray Generate(NDArray idx, int maxNewTokens)
         {
             for (int _ = 0; _ < maxNewTokens; _++)
@@ -122,8 +115,26 @@ namespace AroopaApi.Models.NeuralNetworks
         private NDArray Softmax(NDArray logits)
         {
             var maxLogits = np.max(logits, axis: 1, keepdims: true);
-            var expLogits = np.exp(logits - maxLogits); // Numerical stability
-            return expLogits / np.sum(expLogits, axis: 1, keepdims: true);
+            var expLogits = np.exp(logits - maxLogits);
+
+            // Initialize sumExpLogits as zeros with the shape (batchSize, 1)
+            var sumExpLogits = np.zeros(new Shape(expLogits.shape[0], 1));
+
+            // Manually sum the exponentiated logits across the second axis (sequence length)
+            for (int i = 0; i < expLogits.shape[0]; i++) // Iterate over batches
+            {
+                double sum = 0.0;
+                for (int j = 0; j < expLogits.shape[1]; j++) // Iterate over the vocabulary size
+                {
+                    sum += expLogits[i, j];
+                }
+                sumExpLogits[i, 0] = sum;
+            }
+
+            // Perform the division to get the softmax probabilities
+            return expLogits / sumExpLogits;
         }
+
+
     }
 }

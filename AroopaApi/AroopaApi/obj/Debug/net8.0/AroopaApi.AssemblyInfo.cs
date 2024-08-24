@@ -16,7 +16,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCopyrightAttribute("AGPL-3.0 license")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("this library contains the important algorithms for bulding GPT")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+15f706e9b99405aca04706ef84fad81082a3943e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94d4750a4f20679cef18759c0e2b7a8259d36151")]
 [assembly: System.Reflection.AssemblyProductAttribute("AroopaApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AroopaApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

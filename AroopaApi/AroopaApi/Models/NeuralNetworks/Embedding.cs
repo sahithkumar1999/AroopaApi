@@ -1,5 +1,6 @@
 ﻿using NumSharp;
 using System;
+using System.Diagnostics;
 
 namespace AroopaApi.Models.NeuralNetworks
 {
@@ -32,7 +33,7 @@ namespace AroopaApi.Models.NeuralNetworks
             {
                 // Corrected this line to use integers directly
                 this.weight = np.random.normal(0, 1, num_embeddings, embedding_dim);
-                Console.WriteLine($"Weight initialized with shape: {this.weight.shape}"); // Debugging line
+                Debug.WriteLine($"Weight initialized with shape: {this.weight.shape}"); // Debugging line
                 this.FillPaddingIndexWithZero(); // Ensure padding index is set to zero
             }
             else
@@ -47,7 +48,7 @@ namespace AroopaApi.Models.NeuralNetworks
             }
 
             // Debugging line to print the shape of the weight matrix
-            Console.WriteLine($"Final weight matrix shape: {this.weight.shape}");
+            Debug.WriteLine($"Final weight matrix shape: {this.weight.shape}");
         }
 
         private void FillPaddingIndexWithZero()
@@ -76,8 +77,8 @@ namespace AroopaApi.Models.NeuralNetworks
             int embeddingDim = this.weight.shape[1]; // Number of columns in weight matrix
 
             // Debugging lines to check dimensions
-            Console.WriteLine($"Forward called with input shape: {input.shape}");
-            Console.WriteLine($"Weight matrix shape: {this.weight.shape}");
+            Debug.WriteLine($"Forward called with input shape: {input.shape}");
+            Debug.WriteLine($"Weight matrix shape: {this.weight.shape}");
 
             // Initialize the result NDArray
             NDArray result = np.zeros(new Shape(batchSize, sequenceLength, embeddingDim));
@@ -89,7 +90,7 @@ namespace AroopaApi.Models.NeuralNetworks
                     int idx = (int)input[i, j]; // Ensure input values are integers
 
                     // Add a debug statement to check the index and shapes
-                    Console.WriteLine($"Processing batch {i}, sequence {j}: idx = {idx}");
+                    Debug.WriteLine($"Processing batch {i}, sequence {j}: idx = {idx}");
 
                     if (idx >= vocabSize || idx < 0)
                     {

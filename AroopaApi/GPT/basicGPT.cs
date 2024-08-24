@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using AroopaApi.Encoders;
 using AroopaApi.Models.NeuralNetworks;
+using NumSharp;
+using AroopaApi.Losses;
+using System.ComponentModel.DataAnnotations;
 
 namespace GPT
 {
@@ -19,6 +22,7 @@ namespace GPT
         {
             GPTmethods GPTmethods = new GPTmethods();
             lambdaEncoder lambdaEncoder = new lambdaEncoder();
+            CrossEntropyLoss CrossEntropyLoss = new CrossEntropyLoss();
 
             string filePath = "D:\\Company Aroopa\\Aroopa\\AroopaApi\\GPT\\TrainingFiles\\shakespeare.txt";
             var text = GPTmethods.ReadTextFromFile(filePath);
@@ -96,11 +100,26 @@ namespace GPT
             BigramLanguageModel bigramLanguageModel = new BigramLanguageModel(vocabSize);
 
             // Perform a forward pass by explicitly calling the Forward method
-            var (logits, loss) = bigramLanguageModel.Forward(xb, yb);
+            var (logits, targets) = bigramLanguageModel.Forward(xb, yb);
 
             // Output the results
             Console.WriteLine($"Logits shape: {logits.shape}");
-            Console.WriteLine($"Loss: {loss}");
+            Console.WriteLine($"Logits shape: ({string.Join(", ", logits.shape)})");
+
+            //Console.WriteLine($"Loss: {loss}");
+            NDArray idx = np.zeros(new Shape(1, 1), dtype: np.int64);
+            NDArray generatedSequence = bigramLanguageModel.Generate(idx, 50);
+
+            // Cast the NDArray to Int32 before converting to a list
+            List<int> generatedList = generatedSequence.astype(np.int32).ToArray<int>().ToList();
+
+            string decodedString = lambdaEncoder.Decode(generatedList, chars);
+            Console.WriteLine(decodedString);
+
+            var losses = CrossEntropyLoss.ComputeCrossEntropyLoss(logits, targets);
+
+            Console.WriteLine($"Losses : {losses}");
+
         }
 
 
