@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "CX09GN5tLPf1nW1Am9BB6+gHA7nfyVmYy6pcGkhOO8F01PCKxlHFfPTejiB8+0B8u3k9vUp2d6Soo31MNeujRg==",
+  "dgSpecHash": "lZ/bWFdKdxjIo6W1HuTG3aYwJfPrS97jZUS6JhjA8FZN2c+hemJgbe4/pA5eN+jxRBnh1iCxYfxWa2Bj5jodDQ==",
   "success": true,
   "projectFilePath": "D:\\Company Aroopa\\Aroopa\\AroopaApi\\GPT\\GPT.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\SAHITH\\.nuget\\packages\\numsharp\\0.30.0\\numsharp.0.30.0.nupkg.sha512",
+    "C:\\Users\\SAHITH\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -36,3 +36,4 @@ D:\Company Aroopa\Aroopa\AroopaApi\GPT\obj\Debug\net8.0\GPT.pdb
 D:\Company Aroopa\Aroopa\AroopaApi\GPT\obj\Debug\net8.0\GPT.genruntimeconfig.cache
 D:\Company Aroopa\Aroopa\AroopaApi\GPT\obj\Debug\net8.0\ref\GPT.dll
 D:\Company Aroopa\Aroopa\AroopaApi\GPT\bin\Debug\net8.0\TrainingFiles\shakespeare.txt
+D:\Company Aroopa\Aroopa\AroopaApi\GPT\bin\Debug\net8.0\NumSharp.dll
