@@ -16,7 +16,7 @@ namespace GPT
         
         private static Random rand = new Random(1337); // Set seed for reproducibility
         private static int batchSize = 4; // Number of independent sequences processed in parallel
-        private static int blockSize = 8; // Maximum context length for predictions
+        private static int blockSize = 8; // Maximum context length for predictions.
 
         public static void trainGPT()
         {
