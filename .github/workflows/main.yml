@@ -13,7 +13,7 @@ jobs:
       run:
         working-directory: ${{env.WrkDir}}
     env: 
-      WrkDir: ./AroopaApi
+      WrkDir: ./src/AroopaApi
       MainSln: AroopaApi.sln
     steps:
       - uses: actions/checkout@v2
