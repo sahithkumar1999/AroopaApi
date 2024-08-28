@@ -7,17 +7,22 @@
     <GeneratePackageOnBuild>False</GeneratePackageOnBuild>
     <Title>AroopaApi</Title>
     <Authors>Sahith Kumar Singari</Authors>
-    <Company>Aroopa</Company>
-    <Description>this library contains the important algorithms for bulding GPT</Description>
+    <Company>AroopaApi</Company>
+    <Description>This API is designed to be a robust resource for developers, researchers, and data scientists who seek to leverage state-of-the-art techniques in their applications. It offers an extensive collection of algorithms that span various domains, including neural networks, natural language processing, and statistical analysis, allowing for seamless integration and deployment in .NET-based environments.</Description>
     <Copyright>AGPL-3.0 license</Copyright>
     <PackageReadmeFile>Readme.md</PackageReadmeFile>
-    <RepositoryUrl>https://github.com/sahithkumar1999/Aroopa</RepositoryUrl>
+    <RepositoryUrl>https://github.com/sahithkumar1999/AroopaApi</RepositoryUrl>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Include="..\..\LICENSE">
+    <None Include="..\..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\..\LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
