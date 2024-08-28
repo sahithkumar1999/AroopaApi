@@ -24,7 +24,7 @@ namespace GPT
             lambdaEncoder lambdaEncoder = new lambdaEncoder();
             CrossEntropyLoss CrossEntropyLoss = new CrossEntropyLoss();
 
-            string filePath = "D:\\Company Aroopa\\Aroopa\\AroopaApi\\GPT\\TrainingFiles\\shakespeare.txt";
+            string filePath = "D:\\Company Aroopa\\Aroopa\\src\\AroopaApi\\GPT\\TrainingFiles\\shakespeare.txt";
             var text = GPTmethods.ReadTextFromFile(filePath);
             Console.WriteLine($"Length of dataset in Characters: {text.Length}");
 

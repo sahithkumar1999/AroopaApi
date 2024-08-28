@@ -49,11 +49,6 @@ namespace GPT
 
             // Return the list of unique characters and the vocabulary size
             return (chars, vocabSize);
-        }
-
-
-
-        
-
+        } 
     }
 }
