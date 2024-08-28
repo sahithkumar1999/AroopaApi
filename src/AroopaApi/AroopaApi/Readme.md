@@ -4,6 +4,6 @@ Welcome to our open-source API, a powerful and versatile library crafted to prov
 
 # Available Namespaces
 
-- [`AroopaApi.Encoders`](\Encoders\Readme.md)
-- [`AroopaApi.Losses`](\Losses\Readme.md)
-- [`AroopaApi.Models.NeuralNetworks`](\Models\NeuralNetworks\Readme)
+- [`AroopaApi.Encoders`](/Encoders/Readme.md)
+- [`AroopaApi.Losses`](/Losses/Readme.md)
+- [`AroopaApi.Models.NeuralNetworks`](/Models/NeuralNetworks/Readme)
