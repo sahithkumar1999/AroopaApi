@@ -32,11 +32,13 @@ Computes the cross-entropy loss between predicted logits or probabilities (`inpu
 
 ```csharp
 using NumSharp;
+using AroopaApi.Losses;
 
 // Example usage
 NDArray input = np.array(new double[,] { { 0.9, 0.1 }, { 0.4, 0.6 }, { 0.2, 0.8 } });
 NDArray target = np.array(new int[] { 0, 1, 1 });
 
+CrossEntropyLoss CrossEntropyLoss = new CrossEntropyLoss();
 double loss = CrossEntropyLoss.ComputeCrossEntropyLoss(input, target);
 Console.WriteLine($"Cross-Entropy Loss: {loss}");
 ```
@@ -54,7 +56,10 @@ Computes softmax probabilities from logits (scores).
 
 #### Example:
 ```csharp
+using AroopaApi.Losses;
 double[] logits = { 2.0, 1.0, 0.1 };
+
+CrossEntropyLoss CrossEntropyLoss = new CrossEntropyLoss();
 double[] probabilities = CrossEntropyLoss.Softmax(logits);
 Console.WriteLine($"Softmax Probabilities: [{string.Join(", ", probabilities)}]");
 ```
