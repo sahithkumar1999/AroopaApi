@@ -57,41 +57,6 @@ namespace AroopaApi.Models.NeuralNetworks
         }
 
         /// <summary>
-        /// Computes the cross-entropy loss between logits and targets.
-        /// </summary>
-        /// <param name="logits">Predicted logits from the model (shape: batch_size * sequence_length x vocab_size).</param>
-        /// <param name="targets">True class indices for computing loss (shape: batch_size * sequence_length).</param>
-        /// <returns>The computed cross-entropy loss as a float.</returns>
-        private float ComputeCrossEntropyLoss(NDArray logits, NDArray targets)
-        {
-            int batchSize = logits.shape[0];
-            int vocabSize = logits.shape[1];
-            int[] targetIndices = targets.ToArray<int>();
-
-            // Extract the logits corresponding to the target classes
-            NDArray targetLogits = np.empty(new Shape(batchSize));
-            for (int i = 0; i < batchSize; i++)
-            {
-                targetLogits[i] = logits[i, targetIndices[i]];
-            }
-
-            // Apply softmax to logits
-            NDArray softmax = Softmax(logits);
-
-            // Compute log probabilities of the target classes
-            NDArray logProbs = np.log(softmax);
-            NDArray targetLogProbs = np.empty(new Shape(batchSize));
-            for (int i = 0; i < batchSize; i++)
-            {
-                targetLogProbs[i] = logProbs[i, targetIndices[i]];
-            }
-
-            // Compute the cross-entropy loss
-            float loss = -np.mean(targetLogProbs);
-            return loss;
-        }
-
-        /// <summary>
         /// Generates a sequence of tokens given an initial input.
         /// </summary>
         /// <param name="idx">Initial input indices for the sequence (shape: batch_size x sequence_length).</param>
