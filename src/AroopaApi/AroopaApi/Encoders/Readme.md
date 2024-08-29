@@ -14,10 +14,13 @@ Encodes a given string (`Data`) using a specified list of characters (`chars`). 
 
 #### Example:
 ```csharp
+using AroopaApi.Encoders;
+
 lambdaEncoder encoder = new lambdaEncoder();
 string inputString = "hello";
 List<char> characterSet = new List<char> { 'h', 'e', 'l', 'o' };
 List<int> encodedData = encoder.Encode(inputString, characterSet);
+Console.WriteLine(string.Join(", ", encodedData));
 // encodedData should now contain: [0, 1, 2, 2, 3]
 ```
 
@@ -30,10 +33,13 @@ public string Decode(List<int> Data, List<char> chars)
 Decodes a given list of integers (`Data`) using a specified list of characters (`chars`). Each integer in the list is converted back to its corresponding character in the `chars` list, forming the original string.
 #### Example:
 ```csharp
+using AroopaApi.Encoders;
+
 lambdaEncoder decoder = new lambdaEncoder();
-List<int> encodedData = new List<int> { 0, 1, 2, 2, 3 };
-List<char> characterSet = new List<char> { 'h', 'e', 'l', 'o' };
-string decodedString = decoder.Decode(encodedData, characterSet);
+List<int> encodedData1 = new List<int> { 0, 1, 2, 2, 3 };
+List<char> characterSet1 = new List<char> { 'h', 'e', 'l', 'o' };
+string decodedString = decoder.Decode(encodedData1, characterSet1);
+Console.WriteLine(decodedString);
 // decodedString should now contain: "hello"
 ```
 
