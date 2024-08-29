@@ -37,5 +37,31 @@ string decodedString = decoder.Decode(encodedData, characterSet);
 // decodedString should now contain: "hello"
 ```
 
+```
+  +-----------------+
+  |   Encode()      |
+  | (Input String)  |
+  +-----------------+
+           |
+           v
+  +-----------------+
+  | Character Set   |
+  | (List of Chars) |
+  +-----------------+
+           |
+           v
+  +-----------------+
+  |  Encode Function|
+  |  (Converts String|
+  |  to List of Ints)|
+  +-----------------+
+           |
+           v
+  +-----------------+
+  | Encoded Data    |
+  | (List of Ints)  |
+  +-----------------+
 
+  (Decoding is the reverse process)
 
+```
