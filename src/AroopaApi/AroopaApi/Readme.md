@@ -6,4 +6,4 @@ Welcome to our open-source API, the future powerful and versatile library crafti
 
 - [`AroopaApi.Encoders`](Encoders/Readme.md)
 - [`AroopaApi.Losses`](Losses/Readme.md)
-- [`AroopaApi.Models.NeuralNetworks`](Models/NeuralNetworks/Readme)
+- [`AroopaApi.Models.NeuralNetworks`](Models/NeuralNetworks/Readme.md)
