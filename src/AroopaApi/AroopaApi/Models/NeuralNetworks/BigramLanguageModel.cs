@@ -1,4 +1,6 @@
 ﻿using AroopaApi.Interfaces;
+using AroopaApi.Optimizer;
+using MathNet.Numerics.Distributions;
 using NumSharp;
 using System;
 using System.Linq;
@@ -14,6 +16,9 @@ namespace AroopaApi.Models.NeuralNetworks
         /// Embedding table for token representations.
         /// </summary>
         public Embedding TokenEmbeddingTable { get; private set; }
+
+        // AdamW optimizer for training
+        private AdamW optimizer;
 
         /// <summary>
         /// Initializes the Bigram Language Model with the given vocabulary size.
@@ -108,5 +113,7 @@ namespace AroopaApi.Models.NeuralNetworks
             // Perform the division to get the softmax probabilities
             return expLogits / sumExpLogits;
         }
+
+        
     }
 }

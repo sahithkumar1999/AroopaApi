@@ -8,6 +8,8 @@ using AroopaApi.Models.NeuralNetworks;
 using NumSharp;
 using AroopaApi.Losses;
 using System.ComponentModel.DataAnnotations;
+using AroopaApi.Optimizer;
+
 
 namespace GPT
 {
@@ -119,6 +121,10 @@ namespace GPT
             var losses = CrossEntropyLoss.ComputeCrossEntropyLoss(logits, targets);
 
             Console.WriteLine($"Losses : {losses}");
+            
+
+
+           
 
         }
 
