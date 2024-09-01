@@ -12,6 +12,9 @@ namespace GPT
         
         static void Main(string[] args)
         {
+            
+
+
             basicGPT basicGPT = new basicGPT();
             basicGPT.trainGPT();
 
