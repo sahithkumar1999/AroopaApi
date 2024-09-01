@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using AroopaApi.Interfaces;
 using NumSharp;
 
 namespace AroopaApi.Losses
@@ -7,7 +8,7 @@ namespace AroopaApi.Losses
     /// <summary>
     /// Provides methods to compute cross-entropy loss and softmax probabilities.
     /// </summary>
-    public class CrossEntropyLoss
+    public class CrossEntropyLoss : ICrossEntropyLoss
     {
         /// <summary>
         /// Computes the cross-entropy loss between predicted probabilities and target labels.
@@ -19,7 +20,7 @@ namespace AroopaApi.Losses
         /// <param name="reduction">Type of reduction to apply to the loss: "mean" or "sum".</param>
         /// <param name="labelSmoothing">Amount of label smoothing to apply (0.0 means no smoothing).</param>
         /// <returns>The computed cross-entropy loss as a double.</returns>
-        public static double ComputeCrossEntropyLoss(
+        public double ComputeCrossEntropyLoss(
             NDArray input,
             NDArray target,
             double[] weight = null,
@@ -100,7 +101,7 @@ namespace AroopaApi.Losses
         /// </summary>
         /// <param name="logits">Array of logits (scores) from which to compute the probabilities.</param>
         /// <returns>An array of softmax probabilities.</returns>
-        public static double[] Softmax(double[] logits)
+        public double[] Softmax(double[] logits)
         {
             // Find the maximum logit value for numerical stability
             double maxLogit = logits.Max();

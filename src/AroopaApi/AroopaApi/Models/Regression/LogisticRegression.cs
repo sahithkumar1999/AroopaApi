@@ -1,16 +1,17 @@
-﻿using System;
+﻿using AroopaApi.IClassifiers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AroopaApi.Models.Regression
+namespace AroopaApi.Models.Regression 
 {
     /// <summary>
     /// Logistic Regression implementation from scratch in C#.
     /// Supports basic binary classification with L2 regularization.
     /// </summary>
-    public class LogisticRegression
+    public class LogisticRegression : IlogisticRegression
     {
         public double[] Coefficients { get; private set; } // Model coefficients
         public double Intercept { get; private set; } // Model intercept
@@ -124,7 +125,7 @@ namespace AroopaApi.Models.Regression
         /// </summary>
         /// <param name="z">Input value</param>
         /// <returns>Sigmoid output</returns>
-        private double Sigmoid(double z)
+        public double Sigmoid(double z)
         {
             return 1.0 / (1.0 + Math.Exp(-z));
         }

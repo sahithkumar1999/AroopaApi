@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AroopaApi.Interfaces;
+using System;
 
 namespace AroopaApi.Models.Regression
 {
@@ -6,7 +7,7 @@ namespace AroopaApi.Models.Regression
     /// A simple implementation of Ordinary Least Squares Linear Regression.
     /// This class provides methods to fit a linear model and predict new values.
     /// </summary>
-    public class LinearRegression
+    public class LinearRegression : ILinearRegression
     {
         public double[] coef_;   // Coefficients of the model (weights of the features)
         public double intercept_; // Intercept (bias) of the model
@@ -120,7 +121,7 @@ namespace AroopaApi.Models.Regression
         /// <param name="A">First matrix (rowsA x colsA)</param>
         /// <param name="B">Second matrix (colsA x colsB)</param>
         /// <returns>Product matrix (rowsA x colsB)</returns>
-        private double[,] Multiply(double[,] A, double[,] B)
+        public double[,] Multiply(double[,] A, double[,] B)
         {
             int rowsA = A.GetLength(0); // Number of rows in the first matrix
             int colsA = A.GetLength(1); // Number of columns in the first matrix (must match rows of B)
@@ -146,7 +147,7 @@ namespace AroopaApi.Models.Regression
         /// <param name="A">Matrix (rowsA x colsA)</param>
         /// <param name="b">Vector (colsA)</param>
         /// <returns>Product vector (rowsA)</returns>
-        private double[] Multiply(double[,] A, double[] b)
+        public double[] Multiply(double[,] A, double[] b)
         {
             int rowsA = A.GetLength(0); // Number of rows in the matrix
             int colsA = A.GetLength(1); // Number of columns in the matrix (must match length of b)

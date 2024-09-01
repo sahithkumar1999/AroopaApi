@@ -1,4 +1,5 @@
-﻿using NumSharp;
+﻿using AroopaApi.Interfaces;
+using NumSharp;
 using System;
 using System.Diagnostics;
 
@@ -7,7 +8,7 @@ namespace AroopaApi.Models.NeuralNetworks
     /// <summary>
     /// Represents an embedding layer that maps token indices to dense vectors.
     /// </summary>
-    public class Embedding
+    public class Embedding : IEmbedding
     {
         // Number of embeddings (vocabulary size)
         public int num_embeddings;
@@ -78,7 +79,7 @@ namespace AroopaApi.Models.NeuralNetworks
         /// <summary>
         /// Sets the embedding vector for the padding index to zero.
         /// </summary>
-        private void FillPaddingIndexWithZero()
+        public void FillPaddingIndexWithZero()
         {
             if (padding_idx != null)
             {

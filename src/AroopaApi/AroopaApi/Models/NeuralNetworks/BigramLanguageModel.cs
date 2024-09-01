@@ -1,4 +1,5 @@
-﻿using NumSharp;
+﻿using AroopaApi.Interfaces;
+using NumSharp;
 using System;
 using System.Linq;
 
@@ -7,7 +8,7 @@ namespace AroopaApi.Models.NeuralNetworks
     /// <summary>
     /// Bigram Language Model using token embeddings and softmax for predictions.
     /// </summary>
-    public class BigramLanguageModel
+    public class BigramLanguageModel : IBigramLanguageModel
     {
         /// <summary>
         /// Embedding table for token representations.
@@ -85,7 +86,7 @@ namespace AroopaApi.Models.NeuralNetworks
         /// </summary>
         /// <param name="logits">The logits to apply softmax to (shape: batch_size x vocab_size).</param>
         /// <returns>The computed softmax probabilities (shape: batch_size x vocab_size).</returns>
-        private NDArray Softmax(NDArray logits)
+        public NDArray Softmax(NDArray logits)
         {
             var maxLogits = np.max(logits, axis: 1, keepdims: true);
             var expLogits = np.exp(logits - maxLogits);
